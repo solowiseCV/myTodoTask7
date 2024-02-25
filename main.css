@@ -16,16 +16,31 @@
 
 body {
 	display: flex;
+	align-items: center;
 	flex-direction: column;
 	min-height: 100vh;
 	color: #FFF;
-	background-color: var(--dark);
+	background-color: whitesmoke;
+
 }
+.container{
+	position: relative;
+    width: 28.125rem;
+    height: 34.375rem;
+	padding: 30px;
+    background: #2f3632;
+    box-shadow: 25px 25px 75px rgba(0,0,0,0.25),
+    10px 10px 70px rgba(0,0,0,0.25),
+    inset 5px 5px 10px rgba(0,0,0,0.5),
+    inset 5px 5px 20px rgba(255,255,255,0.2),
+    inset -5px -5px 15px rgba(0,0,0,0.75);
+}
+
 
 header {
 	padding: 2rem 1rem;
 	max-width: 800px;
-	width: 100%;
+	width: 90%;
 	margin: 0 auto;
 }
 
@@ -38,7 +53,11 @@ header h1{
 
 #new-task-form {
 	display: flex;;
+	align-items: center;
+	justify-content: center;
+	
 }
+
 
 input, button {
 	appearance: none;
@@ -48,7 +67,7 @@ input, button {
 }
 
 #new-task-input {
-	flex: 1 1 0%;
+	flex: 3;
 	background-color: var(--darker);
 	padding: 1rem;
 	border-radius: 1rem;
@@ -70,7 +89,13 @@ input, button {
 	-webkit-text-fill-color: transparent;
 	cursor: pointer;
 	transition: 0.4s;
+    flex: 2;
 }
+.task.completed {
+	text-decoration: line-through;
+	opacity: 0.7;
+}
+
 
 #new-task-submit:hover {
 	opacity: 0.8;
